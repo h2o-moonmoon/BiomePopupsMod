@@ -125,23 +125,13 @@ Mod: {
 			}
 
 			isHideWhileInventoryOpen: {
-				Label: {
-					$parentVal: Hide While Inventory Open
-				}
-
-				Tooltip: {
-					$parentVal: Should popup be hidden when the player inventory is open
-				}
+				Label: Hide While Inventory Open
+				Tooltip: Should popup be hidden when the player inventory is open
 			}
 
 			isHideWhileBossAlive: {
-				Label: {
-					$parentVal: Hide While Boss Is Alive
-				}
-
-				Tooltip: {
-					$parentVal: Should popup be hidden while a boss is alive
-				}
+				Label: Hide While Boss Is Alive
+				Tooltip: Should popup be hidden while a boss is alive
 			}
 
 			animationType: {
@@ -165,42 +155,37 @@ Mod: {
 			}
 
 			biomeCheckDelay: {
-				Label: {
-					$parentVal: Biome Check Interval
-				}
-
-				Tooltip: {
-					$parentVal: Interval (in ticks) between biome checks
-				}
+				Label: Biome Check Interval
+				Tooltip: Interval (in ticks) between biome checks
 			}
 
 			AnimationOutTime: {
 				Tooltip: {
-					$parentVal: Time (in frames) for the popup to animate out (disappear)
+					$parentVal: Duration (in tics) for the popup to animate out (disappear)
 				}
 
 				Label: {
-					$parentVal: Animation Out Duration
+					$parentVal: Animation-Out Duration
 				}
 			}
 
 			AnimateInDuration: {
 				Tooltip: {
-					$parentVal: Time (in frames) for the popup to animate in
+					$parentVal: Duration (in tics) for the popup to animate in
 				}
 
 				Label: {
-					$parentVal: Animation Time
+					$parentVal: Animation-In Duration
 				}
 			}
 
 			VisibleDuration: {
 				Tooltip: {
-					$parentVal: Time (in frames) for the popup to remain stationary between animations (-1 means infinite)
+					$parentVal: Duration (in tics) for the popup to remain stationary between animations (-1 means infinite)
 				}
 
 				Label: {
-					$parentVal: Display Time
+					$parentVal: Display Duration
 				}
 			}
 
@@ -215,13 +200,8 @@ Mod: {
 			}
 
 			ScaleWithUI: {
-				Label: {
-					$parentVal: Scale with UI
-				}
-
-				Tooltip: {
-					$parentVal: If enabled, the popup will scale along with the UI scale
-				}
+				Label: Scale with UI
+				Tooltip: If enabled, the popup will scale along with the UI scale
 			}
 
 			CustomScale: {
@@ -243,6 +223,26 @@ Mod: {
 					$parentVal: Title appear and disappear animation
 				}
 			}
+
+			IsScaleWithUI: {
+				Label: Scale with UI
+				Tooltip: If enabled, the popup will scale along with the UI scale
+			}
+
+			IsHideWhileInventoryOpen: {
+				Label: Hide While Inventory Open
+				Tooltip: Should popup be hidden when the player inventory is open
+			}
+
+			IsHideWhileBossAlive: {
+				Label: Hide While Boss Is Alive
+				Tooltip: Should popup be hidden while a boss is alive
+			}
+
+			BiomeCheckDelay: {
+				Label: Biome Check Interval
+				Tooltip: Interval (in ticks) between biome checks
+			}
 		}
 
 		PositionOption: {
@@ -262,11 +262,7 @@ Mod: {
 				}
 			}
 
-			Custom: {
-				Label: {
-					$parentVal: Custom
-				}
-			}
+			Custom.Label: Custom
 
 			BottomRight: {
 				Label: {

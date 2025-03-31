@@ -21,8 +21,8 @@ namespace BiomePopupsMod
         [Label("Bottom Right")]
         BottomRight,
 
-        [Label("Custom")]
-        Custom
+        //[Label("Custom")]
+        //Custom
     }
 
     public enum ScaleOption
@@ -75,7 +75,7 @@ namespace BiomePopupsMod
         [Label("Scale with UI")]
         [Tooltip("If enabled, the popup will scale along with the UI scale")]
         [DefaultValue(true)]
-        public bool ScaleWithUI;
+        public bool IsScaleWithUI;
 
         // Add a setting for custom scaling percentage.
         [Label("Custom Popup Scale")]
@@ -84,16 +84,6 @@ namespace BiomePopupsMod
         [Increment(0.1f)]
         [DefaultValue(1f)] // Default is 100% (1.0).
         public float CustomScale;
-        
-        [Label("Hide While Inventory Open")]
-        [Tooltip("Should popup be hidden when the player inventory is open")]
-        [DefaultValue(false)]
-        public bool isHideWhileInventoryOpen;
-
-        [Label("Hide While Boss Is Alive")]
-        [Tooltip("Should popup be hidden while a boss is alive")]
-        [DefaultValue(true)]
-        public bool isHideWhileBossAlive;
 
         [Header("Animation")]
         
@@ -103,22 +93,22 @@ namespace BiomePopupsMod
         [DrawTicks]
         public AnimationType AnimationType;
 
-        [Label("Display Time")]
-        [Tooltip("Time (in frames) for the popup to remain stationary between animations (-1 means infinite)")]
+        [Label("Display Duration")]
+        [Tooltip("Duration (in tics) for the popup to remain stationary between animations (-1 means infinite)")]
         [Range(-1f, 300f)]
         [Increment(1f)]
         [DefaultValue(180f)] // Default value in frames
         public float VisibleDuration;
         
-        [Label("Animation Time")]
-        [Tooltip("Time (in frames) for the popup to animate in")]
+        [Label("Animation-In Duration")]
+        [Tooltip("Duration (in tics) for the popup to animate in")]
         [Range(30f, 120f)]
         [Increment(1f)]
         [DefaultValue(30f)] // Default value in frames
         public float AnimateInDuration;
 
-        [Label("Animation Out Duration")]
-        [Tooltip("Time (in frames) for the popup to animate out (disappear)")]
+        [Label("Animation-Out Duration")]
+        [Tooltip("Duration (in tics) for the popup to animate out (disappear)")]
         [Range(30f, 120f)]
         [Increment(1f)]
         [DefaultValue(30f)] // Default value in frames
@@ -126,12 +116,22 @@ namespace BiomePopupsMod
 
         [Header("Advanced")]
 
+        [Label("Hide While Inventory Open")]
+        [Tooltip("Should popup be hidden when the player inventory is open")]
+        [DefaultValue(false)]
+        public bool IsHideWhileInventoryOpen;
+
+        [Label("Hide While Boss Is Alive")]
+        [Tooltip("Should popup be hidden while a boss is alive")]
+        [DefaultValue(true)]
+        public bool IsHideWhileBossAlive;
+
         [Label("Biome Check Interval")]
         [Tooltip("Interval (in ticks) between biome checks")]
         [Range(1f, 300f)]
         [Increment(1f)]
         [DefaultValue(30f)]
-        public float biomeCheckDelay;
+        public float BiomeCheckDelay;
 
         [JsonIgnore]
         private Dictionary<string, int> _cachedDataHashes = new Dictionary<string, int>();

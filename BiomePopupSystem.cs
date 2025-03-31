@@ -9,8 +9,10 @@ using BiomePopupsMod.Scanners;
 
 /*
 TODO:
+    Tics to Seconds
+    Better Transparency
     Gif Popups
-	Mod Biomes
+	Mod Biomes:
         Verdant
 		Remnants
 		The Stars Above
@@ -35,14 +37,6 @@ namespace BiomePopupsMod;
 
 public class BiomePopupSystem : ModSystem
 {
-    private string currentBiome = "";
-    private int displayTime = 0;
-    private int MaxDisplayTime = 210;
-    private UIState uiState;
-    int currentFrame = 0; // For handling GIF animation
-    private BiomePopup popup;
-    private float currentY;
-    private BiomeScanner _biomeScanner = new();
     private BiomePopupUI _popupState;
 
     public override void OnModLoad()
@@ -50,9 +44,7 @@ public class BiomePopupSystem : ModSystem
         Util.Logger.Instance = Mod;
         if (Main.dedServ) return;
 
-        uiState = new();
         _popupState = new();
-        _biomeScanner.LoadAllTextures();
     }
 
     public override void Unload()
@@ -60,12 +52,8 @@ public class BiomePopupSystem : ModSystem
         Util.Logger.Instance = null;
         if (Main.dedServ) return;
 
-        uiState = null;
         _popupState = null;
-        _biomeScanner.Clear();
     }
-
-    bool IsAnimating = true;
 
     public override void PostUpdatePlayers()
     {

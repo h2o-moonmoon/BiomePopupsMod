@@ -49,7 +49,7 @@ class BiomePopup : UIElement
         // Get the scale from the configuration.
         var config = ModContent.GetInstance<BiomePopupConfig>();
         float scale = config.CustomScale;
-        if (!config.ScaleWithUI) scale /= Main.UIScale;
+        if (!config.IsScaleWithUI) scale /= Main.UIScale;
 
         float textureWidth = _backgroundTexture.Width * scale;
         float textureHeight = _backgroundTexture.Height * scale;

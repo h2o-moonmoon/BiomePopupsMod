@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 using BiomePopupsMod.Scanners;
 using BiomePopupsMod.Util;
@@ -6,10 +7,6 @@ using BiomePopupsMod.Util;
 using Terraria;
 using Terraria.UI;
 using Terraria.ModLoader;
-using Terraria.ModLoader.Config;
-using System.Numerics;
-using System.Linq;
-using tModPorter;
 
 namespace BiomePopupsMod;
 
@@ -17,12 +14,16 @@ internal class BiomePopupUI : UIState
 {
     private bool _isInfiniteStay = false;
     private bool _isAnimating = true;
+
     private string _currentBiome = "";
+
+    private int _biomeTicks = 0;
     private int _displayTime = 0;
     private int _maxDisplayTime = 210;
-    private int _currentFrame = 0; // For handling GIF animation
+    private int _currentFrame = 0; // For handling GIF animations
+
     private BiomePopup _popup;
-    BiomePopupConfig _config;
+    private BiomePopupConfig _config;
 
 
     private BiomeScanner _biomeScanner = new();
@@ -31,7 +32,7 @@ internal class BiomePopupUI : UIState
     {
         get
         {
-            return _config.ScaleWithUI ?
+            return _config.IsScaleWithUI ?
                 InterfaceScaleType.UI :
                 InterfaceScaleType.None;
         }
@@ -80,8 +81,8 @@ internal class BiomePopupUI : UIState
             if (_config != null)
             {
                 bool bossIsAlive = Main.npc.Any(npc => npc.active && npc.boss);
-                if (_config.isHideWhileBossAlive && bossIsAlive) return false;
-                if (_config.isHideWhileInventoryOpen && Main.playerInventory) return false;
+                if (_config.IsHideWhileBossAlive && bossIsAlive) return false;
+                if (_config.IsHideWhileInventoryOpen && Main.playerInventory) return false;
             }
             return (_isInfiniteStay || _displayTime > 0) && _popup != null;
         }
@@ -89,6 +90,7 @@ internal class BiomePopupUI : UIState
 
     public BiomePopupUI()
     {
+        _biomeScanner.LoadAllTextures();
         // setup Config
         _config = ModContent.GetInstance<BiomePopupConfig>();
         _config.OnPropertyChanged += _configPropertyChanged;
@@ -131,10 +133,10 @@ internal class BiomePopupUI : UIState
                 _popup.VAlign = 1f;
                 _popup.MarginBottom = 20f;
                 break;
-            case PositionOption.Custom:
-                _popup.HAlign = 0.5f;
-                _popup.VAlign = 1f;
-                break;
+            //case PositionOption.Custom:
+            //    _popup.HAlign = 0.5f;
+            //    _popup.VAlign = 1f;
+            //    break;
         }
     }
 
@@ -204,10 +206,9 @@ internal class BiomePopupUI : UIState
         return true;
     }
 
-    private int _biomeTicks = 0;
     private string _checkBiomes()
     {
-        int modulus = (int)_config.biomeCheckDelay;
+        int modulus = (int)_config.BiomeCheckDelay;
         _biomeTicks++;
         _biomeTicks %= modulus;
         if (_biomeTicks == 0)
@@ -235,13 +236,13 @@ internal class BiomePopupUI : UIState
     {
         switch (name)
         {
-            case nameof(BiomePopupConfig.isHideWhileInventoryOpen):
-            case nameof(BiomePopupConfig.isHideWhileBossAlive):
-            case nameof(BiomePopupConfig.biomeCheckDelay):
+            case nameof(BiomePopupConfig.IsHideWhileInventoryOpen):
+            case nameof(BiomePopupConfig.IsHideWhileBossAlive):
+            case nameof(BiomePopupConfig.BiomeCheckDelay):
                 _animationConfig.Config = _config;
                 break;
             case nameof(BiomePopupConfig.Position):
-            case nameof(BiomePopupConfig.ScaleWithUI):
+            case nameof(BiomePopupConfig.IsScaleWithUI):
             case nameof(BiomePopupConfig.CustomScale):
             case nameof(BiomePopupConfig.AnimationType):
             case nameof(BiomePopupConfig.VisibleDuration):

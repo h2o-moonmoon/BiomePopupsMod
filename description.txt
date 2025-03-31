@@ -1,5 +1,7 @@
 [b]Stay informed with biome popup cards when you enter different biomes![/b]
 
+[img]https://raw.githubusercontent.com/h2o-moonmoon/BiomePopupsMod/refs/heads/master/ReadmeBanner.gif[/img]
+
 Supported Mods:
 [*] Thorium
 [*] Calamity

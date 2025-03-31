@@ -15,7 +15,7 @@ internal enum LogType
 internal class Logger
 {
     internal static Mod Instance = null;
-    private const bool IsDebug = false;
+    private const bool _isDebug = false;
 
     internal static void Log(LogType type, string category, object message)
     {
@@ -43,7 +43,7 @@ internal class Logger
     }
     internal static void Chat(string s)
     {
-        if (IsDebug)
+        if (_isDebug)
         {
             Main.NewText($"[Biome Popup] {s}");
         }
