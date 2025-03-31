@@ -1,0 +1,4 @@
+displayName = Biome Popups
+author = MoonMoon
+version = 1.2
+description = Stay informed with on-screen popups when you enter different biomes!

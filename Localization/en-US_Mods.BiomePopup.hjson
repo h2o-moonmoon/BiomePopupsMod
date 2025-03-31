@@ -1,0 +1,320 @@
+# This file will automatically update with entries for new content after a build and reload.
+
+Items: {
+	TutorialSword: {
+		DisplayName: Tutorial Sword
+		Tooltip:
+			'''
+			Template of an item
+			Replacing this tooltip is duty 
+			It's snowing on Mt.Fuji
+			'''
+	}
+}
+
+Configs: {
+	BiomePopupConfig: {
+		DisplayName: Biome Popup Config
+
+		scaleWithUI: {
+			Label: Scale with UI
+			Tooltip: If enabled, the popup will scale along with the UI scale.
+		}
+
+		customScale: {
+			Label: Custom Popup Scale
+			Tooltip: Choose the popup size scale, between 50% and 200%.
+		}
+
+		animationTime: {
+			Label: Animation Time
+			Tooltip: The time in frames for the popup to animate in/out.
+		}
+
+		stationaryTime: {
+			Label: Display Time
+			Tooltip: The time in frames for the popup to remain stationary.
+		}
+
+		BiomeCheckDelay: {
+			Tooltip: Interval between biome checks in seconds
+			Label: Biome Check Interval
+		}
+
+		Headers: {
+			Advanced_Customization: Advanced_ Customization Header
+			Animation: Animation Header
+			Visuals_Config: Visuals_ Config Header
+		}
+
+		TitleAnimation: {
+			Tooltip: Title appear and disappear animation
+			Label: Animation Type
+		}
+
+		HideWhileBossIsAlive: {
+			Tooltip: Should titles be hidden while a boss is alive
+			Label: Hide While Boss Is Alive
+		}
+
+		HideWhileInventoryOpen: {
+			Tooltip: Should titles be hidden when the player inventory is open
+			Label: Hide While Inventory Open
+		}
+
+		Position: {
+			Tooltip: Choose the position of the Title
+			Label: Position
+		}
+	}
+
+	AnimationType: {
+		Slide.Label: Slide
+		FadeSwipe.Label: Fade with swipe
+		Fade.Label: Fade
+		None.Label: No animation
+		Tooltip: ""
+	}
+
+	PositionOption: {
+		Custom.Label: Custom
+		Bottom.Label: Bottom
+		Top.Label: Top
+		Tooltip: ""
+	}
+}
+
+Mod: {
+	Configs: {
+		BiomePopupConfig: {
+			DisplayName: {
+				$parentVal: Biome Popup Config
+			}
+
+			Headers: {
+				Visuals_Config: Visuals_ Config Header
+
+				Animation: {
+					$parentVal: Animation Header
+				}
+
+				Advanced_Customization: Advanced_ Customization Header
+
+				Advanced: {
+					$parentVal: Advanced Header
+				}
+
+				Visuals: {
+					$parentVal: Visuals Header
+				}
+			}
+
+			position: {
+				Label: Position
+				Tooltip: Choose the position of the Title
+			}
+
+			scaleWithUI: {
+				Label: Scale with UI
+				Tooltip: If enabled, the popup will scale along with the UI scale.
+			}
+
+			customScale: {
+				Label: Custom Popup Scale
+				Tooltip: Choose the popup size scale, between 50% and 200%.
+			}
+
+			isHideWhileInventoryOpen: {
+				Label: {
+					$parentVal: Hide While Inventory Open
+				}
+
+				Tooltip: {
+					$parentVal: Should popup be hidden when the player inventory is open
+				}
+			}
+
+			isHideWhileBossAlive: {
+				Label: {
+					$parentVal: Hide While Boss Is Alive
+				}
+
+				Tooltip: {
+					$parentVal: Should popup be hidden while a boss is alive
+				}
+			}
+
+			animationType: {
+				Label: Animation Type
+				Tooltip: Title appear and disappear animation
+			}
+
+			stationaryTime: {
+				Label: Display Time
+				Tooltip: The time in frames for the popup to remain stationary.
+			}
+
+			animationTime: {
+				Label: Animation Time
+				Tooltip: "Time for the popup to animate in/out, in frames "
+			}
+
+			animationOutTime: {
+				Label: Animation Out Duration
+				Tooltip: Time for titles to disappear from screen in seconds
+			}
+
+			biomeCheckDelay: {
+				Label: {
+					$parentVal: Biome Check Interval
+				}
+
+				Tooltip: {
+					$parentVal: Interval (in ticks) between biome checks
+				}
+			}
+
+			AnimationOutTime: {
+				Tooltip: {
+					$parentVal: Time (in frames) for the popup to animate out (disappear)
+				}
+
+				Label: {
+					$parentVal: Animation Out Duration
+				}
+			}
+
+			AnimateInDuration: {
+				Tooltip: {
+					$parentVal: Time (in frames) for the popup to animate in
+				}
+
+				Label: {
+					$parentVal: Animation Time
+				}
+			}
+
+			VisibleDuration: {
+				Tooltip: {
+					$parentVal: Time (in frames) for the popup to remain stationary between animations (-1 means infinite)
+				}
+
+				Label: {
+					$parentVal: Display Time
+				}
+			}
+
+			Position: {
+				Label: {
+					$parentVal: Position
+				}
+
+				Tooltip: {
+					$parentVal: Choose the position of the Title
+				}
+			}
+
+			ScaleWithUI: {
+				Label: {
+					$parentVal: Scale with UI
+				}
+
+				Tooltip: {
+					$parentVal: If enabled, the popup will scale along with the UI scale
+				}
+			}
+
+			CustomScale: {
+				Label: {
+					$parentVal: Custom Popup Scale
+				}
+
+				Tooltip: {
+					$parentVal: Choose the popup size scale, between 50% and 200%
+				}
+			}
+
+			AnimationType: {
+				Label: {
+					$parentVal: Animation Type
+				}
+
+				Tooltip: {
+					$parentVal: Title appear and disappear animation
+				}
+			}
+		}
+
+		PositionOption: {
+			Tooltip: {
+				$parentVal: ""
+			}
+
+			Top: {
+				Label: {
+					$parentVal: Top
+				}
+			}
+
+			Bottom: {
+				Label: {
+					$parentVal: Bottom
+				}
+			}
+
+			Custom: {
+				Label: {
+					$parentVal: Custom
+				}
+			}
+
+			BottomRight: {
+				Label: {
+					$parentVal: Bottom Right
+				}
+			}
+
+			BottomLeft: {
+				Label: {
+					$parentVal: Bottom Left
+				}
+			}
+		}
+
+		AnimationType: {
+			Tooltip: {
+				$parentVal: ""
+			}
+
+			None: {
+				Label: {
+					$parentVal: No animation
+				}
+			}
+
+			Fade: {
+				Label: {
+					$parentVal: Fade
+				}
+			}
+
+			FadeSwipe: {
+				Label: {
+					$parentVal: Fade with swipe
+				}
+			}
+
+			Slide: {
+				Label: {
+					$parentVal: Slide
+				}
+			}
+
+			FadeSlide: {
+				Label: {
+					$parentVal: Fade with Slide
+				}
+			}
+		}
+	}
+}
