@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Terraria;
+using tModPorter;
 
 namespace BiomePopupsMod.Util;
 public class AnimationConfig
@@ -119,25 +120,37 @@ internal class AnimationFade : PopupAnimation
 
 internal class AnimationFadeSwipe : PopupAnimation
 {
+    private float _getTarget(AnimationConfig config)
+    {
+        bool isMid = config.PositionOption == (PositionOption.Top | PositionOption.Bottom);
+        return isMid ? 0 : MARGIN;
+    }
     protected override void AnimateIn(float progress, AnimationConfig config, BiomePopup popup)
     {
-        float margin = MathHelper.SmoothStep(-50f, 0, progress);
-        popup.MarginLeft = margin;
+        float margin = MathHelper.SmoothStep(-popup.textureSize.X, _getTarget(config), progress);
+        if (config.PositionOption == PositionOption.BottomRight)
+            popup.MarginRight = margin;
+        else popup.MarginLeft = margin;
         float alpha = MathHelper.SmoothStep(0, 1, progress);
         popup.Alpha = alpha;
     }
 
     protected override void AnimateOut(float progress, AnimationConfig config, BiomePopup popup)
     {
-        float margin = MathHelper.SmoothStep(0, 50f, progress);
-        popup.MarginLeft = margin;
+        float margin = MathHelper.SmoothStep(_getTarget(config), popup.textureSize.X, progress);
+        if (config.PositionOption == PositionOption.BottomRight)
+            popup.MarginRight = margin;
+        else popup.MarginLeft = margin;
         float alpha = MathHelper.SmoothStep(1, 0, progress);
         popup.Alpha = alpha;
     }
 
     protected override void Show(float progress, AnimationConfig config, BiomePopup popup)
     {
-        popup.MarginLeft = 0;
+        float margin = _getTarget(config);
+        if (config.PositionOption == PositionOption.BottomRight)
+            popup.MarginRight = margin;
+        else popup.MarginLeft = margin;
         popup.Alpha = 1.0f;
     }
 }
