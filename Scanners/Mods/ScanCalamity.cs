@@ -16,7 +16,7 @@ internal class ScanCalamity : ModScan
     TOWN_SULPHUR =              "Town_Sulphur",
     TOWN_SUNKEN =               "Town_Sunken",
     SUNKEN_SEA =                "Calamity Sunken Sea",
-    SULPHUR_SEA =                   "Calamity Sulphurous Sea",
+    SULPHUR_SEA =               "Calamity Sulphurous Sea",
     CRAG =                      "Calamity Brimstone Crag",
     ABYSS_1 =                   "Calamity Abyss 1",
     ABYSS_2 =                   "Calamity Abyss 2",

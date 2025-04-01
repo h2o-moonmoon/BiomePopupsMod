@@ -4,8 +4,6 @@ using Terraria;
 using Terraria.UI;
 using Terraria.ModLoader;
 
-using BiomePopupsMod.Scanners;
-
 
 /*
 TODO:

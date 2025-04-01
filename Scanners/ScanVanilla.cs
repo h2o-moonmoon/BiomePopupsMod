@@ -9,14 +9,14 @@ internal class ScanVanilla : BiomeScan
         public const string
         // TOWNS
         TOWN =                          "Town",
-        TOWN_FOREST =                   "Town Forest",
-        TOWN_OCEAN =                    "Town Ocean",
-        TOWN_MUSHROOM =                 "Town Mushroom",
-        TOWN_JUNGLE =                   "Town Jungle",
-        TOWN_SNOW =                     "Town Snow",
-        TOWN_DESERT =                   "Town Desert",
-        TOWN_HALLOW =                   "Town Hallow",
-        TOWN_CAVERN =                   "Town Cavern",
+        TOWN_FOREST =                   "Town_Forest",
+        TOWN_OCEAN =                    "Town_Ocean",
+        TOWN_MUSHROOM =                 "Town_Mushroom",
+        TOWN_JUNGLE =                   "Town_Jungle",
+        TOWN_SNOW =                     "Town_Snow",
+        TOWN_DESERT =                   "Town_Desert",
+        TOWN_HALLOW =                   "Town_Hallow",
+        TOWN_CAVERN =                   "Town_Cavern",
         // Towers
         NEBULA =                        "Nebula",
 		SOLAR =                         "Solar",

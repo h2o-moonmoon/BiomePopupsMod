@@ -195,7 +195,7 @@ Mod: {
 				}
 
 				Tooltip: {
-					$parentVal: Choose the position of the Title
+					$parentVal: Choose the position of the Popup
 				}
 			}
 
@@ -225,23 +225,43 @@ Mod: {
 			}
 
 			IsScaleWithUI: {
-				Label: Scale with UI
-				Tooltip: If enabled, the popup will scale along with the UI scale
+				Label: {
+					$parentVal: Scale with UI
+				}
+
+				Tooltip: {
+					$parentVal: If enabled, the popup will scale along with the UI scale
+				}
 			}
 
 			IsHideWhileInventoryOpen: {
-				Label: Hide While Inventory Open
-				Tooltip: Should popup be hidden when the player inventory is open
+				Label: {
+					$parentVal: Hide While Inventory Open
+				}
+
+				Tooltip: {
+					$parentVal: Should popup be hidden when the player inventory is open
+				}
 			}
 
 			IsHideWhileBossAlive: {
-				Label: Hide While Boss Is Alive
-				Tooltip: Should popup be hidden while a boss is alive
+				Label: {
+					$parentVal: Hide While Boss Is Alive
+				}
+
+				Tooltip: {
+					$parentVal: Should popup be hidden while a boss is alive
+				}
 			}
 
 			BiomeCheckDelay: {
-				Label: Biome Check Interval
-				Tooltip: Interval (in ticks) between biome checks
+				Label: {
+					$parentVal: Biome Check Interval
+				}
+
+				Tooltip: {
+					$parentVal: Interval (in ticks) between biome checks
+				}
 			}
 		}
 

@@ -1,8 +1,5 @@
-﻿
-using Microsoft.Xna.Framework.Graphics.PackedVector;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Terraria;
-using tModPorter;
 
 namespace BiomePopupsMod.Util;
 public class AnimationConfig
@@ -32,6 +29,7 @@ public class AnimationConfig
 
 internal abstract class PopupAnimation
 {
+    protected const float MARGIN = 20f;
 
     protected abstract void AnimateIn(float progress, AnimationConfig config, BiomePopup popup);
     protected abstract void AnimateOut(float progress, AnimationConfig config, BiomePopup popup);
@@ -44,6 +42,8 @@ internal abstract class PopupAnimation
         float inTime = config.InDuration;
         float outTime = config.OutDuration;
         float stationaryTime = config.VisibleDuration;
+
+        if (time == 1) SetupPopup(config, popup);
 
         if (time < inTime)
         {
@@ -62,6 +62,27 @@ internal abstract class PopupAnimation
         }
 
         popup.Recalculate();
+    }
+
+    protected void SetupPopup(AnimationConfig config, BiomePopup popup)
+    {
+        switch (config.PositionOption)
+        {
+            case PositionOption.Top:
+                popup.MarginTop = MARGIN;
+                break;
+            case PositionOption.Bottom:
+                popup.MarginBottom = MARGIN;
+                break;
+            case PositionOption.BottomLeft:
+                popup.MarginBottom = MARGIN;
+                popup.MarginLeft = MARGIN;
+                break;
+            case PositionOption.BottomRight:
+                popup.MarginBottom = MARGIN;
+                popup.MarginRight = MARGIN;
+                break;
+        }
     }
 
 }
@@ -125,13 +146,13 @@ internal class AnimationSlide : PopupAnimation
 {
     protected override void AnimateIn(float progress, AnimationConfig config, BiomePopup popup)
     {
-        float margin = MathHelper.SmoothStep(-popup.textureSize.Y, 20f, progress);
+        float margin = MathHelper.SmoothStep(-popup.textureSize.Y, MARGIN, progress);
         _setMargin(margin, config, popup);
     }
 
     protected override void AnimateOut(float progress, AnimationConfig config, BiomePopup popup)
     {
-        float margin = MathHelper.SmoothStep(20f, -popup.textureSize.Y, progress);
+        float margin = MathHelper.SmoothStep(MARGIN, -popup.textureSize.Y, progress);
         _setMargin(margin, config, popup);
     }
 

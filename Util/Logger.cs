@@ -15,7 +15,7 @@ internal enum LogType
 internal class Logger
 {
     internal static Mod Instance = null;
-    private const bool _isDebug = false;
+    private const bool _isDebug = true;
 
     internal static void Log(LogType type, string category, object message)
     {

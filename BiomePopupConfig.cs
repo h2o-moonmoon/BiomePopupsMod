@@ -66,7 +66,7 @@ namespace BiomePopupsMod
         [Header("Visuals")]
         
         [Label("Position")]
-        [Tooltip("Choose the position of the Title")]
+        [Tooltip("Choose the position of the Popup")]
         [DefaultValue(PositionOption.Top)]
         [DrawTicks]
         public PositionOption Position;
