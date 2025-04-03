@@ -1,20 +1,8 @@
 # This file will automatically update with entries for new content after a build and reload.
 
-Items: {
-	TutorialSword: {
-		DisplayName: Tutorial Sword
-		Tooltip:
-			'''
-			Template of an item
-			Replacing this tooltip is duty 
-			It's snowing on Mt.Fuji
-			'''
-	}
-}
-
 Configs: {
 	BiomePopupConfig: {
-		DisplayName: Biome Popup Config
+		DisplayName: Config
 
 		scaleWithUI: {
 			Label: Scale with UI
@@ -42,9 +30,9 @@ Configs: {
 		}
 
 		Headers: {
-			Advanced_Customization: Advanced_ Customization Header
-			Animation: Animation Header
-			Visuals_Config: Visuals_ Config Header
+			Animation: Animations
+			Advanced: Advanced
+			Visuals: Visuals
 		}
 
 		TitleAnimation: {
@@ -92,13 +80,9 @@ Mod: {
 			}
 
 			Headers: {
-				Visuals_Config: Visuals_ Config Header
-
 				Animation: {
 					$parentVal: Animation Header
 				}
-
-				Advanced_Customization: Advanced_ Customization Header
 
 				Advanced: {
 					$parentVal: Advanced Header

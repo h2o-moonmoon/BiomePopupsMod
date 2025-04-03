@@ -25,18 +25,6 @@ namespace BiomePopupsMod
         //Custom
     }
 
-    public enum ScaleOption
-    {
-        [Label("Small")]
-        Small,
-
-        [Label("Normal")]
-        Normal,
-
-        [Label("Big")]
-        Big
-    }
-
     public enum AnimationType
     {
         [Label("No animation")]

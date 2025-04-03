@@ -7,6 +7,7 @@ using BiomePopupsMod.Util;
 using Terraria;
 using Terraria.UI;
 using Terraria.ModLoader;
+using Microsoft.Xna.Framework;
 
 namespace BiomePopupsMod;
 
@@ -17,6 +18,7 @@ internal class BiomePopupUI : UIState
 
     private string _currentBiome = "";
 
+    private float _currentScale;
     private int _biomeTicks = 0;
     private int _displayTime = 0;
     private int _maxDisplayTime = 210;
@@ -94,12 +96,20 @@ internal class BiomePopupUI : UIState
         // setup Config
         _config = ModContent.GetInstance<BiomePopupConfig>();
         _config.OnPropertyChanged += _configPropertyChanged;
-        Main.OnResolutionChanged += _setSize;
+        _currentScale = Main.UIScale;
     }
 
-    private void _setSize(Microsoft.Xna.Framework.Vector2 vector)
+
+    public void _checkScale()
     {
-        _popup.CalculateSize();
+        if (_popup == null) return;
+        if (Main.UIScale == _currentScale) return;
+
+        // Update the stored value
+        _currentScale = Main.UIScale;
+        _resetSize();
+        Recalculate();
+        Logger.Chat("UI Changed");
     }
 
     private void _setPosition()
@@ -111,8 +121,14 @@ internal class BiomePopupUI : UIState
         _popup.MarginRight = 0;
         _popup.MarginBottom = 0;
         _popup.Alpha = 1;
-        _popup.CalculateSize();
+        _resetSize();
+    }
 
+    private void _resetSize()
+    {
+        if (_popup == null) return;
+
+        _popup.CalculateSize();
         switch (_positionOption)
         {
             case PositionOption.Top:
@@ -133,10 +149,6 @@ internal class BiomePopupUI : UIState
                 _popup.VAlign = 1f;
                 _popup.MarginBottom = 20f;
                 break;
-            //case PositionOption.Custom:
-            //    _popup.HAlign = 0.5f;
-            //    _popup.VAlign = 1f;
-            //    break;
         }
     }
 
@@ -160,6 +172,7 @@ internal class BiomePopupUI : UIState
             return;
         }
 
+        _checkScale();
         // return if timer expired
         if (_displayTime <= 0 && !_isInfiniteStay)
         {
