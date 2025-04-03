@@ -12,12 +12,12 @@ internal class ScanCalamity : ModScan
 
     public const string
     TOWN_ASTRAL =               "Town_Astral",
-    TOWN_CRAGS =                "Town_Crags",
+    TOWN_CRAGS =                "Town_Crags_gif",
     TOWN_SULPHUR =              "Town_Sulphur",
     TOWN_SUNKEN =               "Town_Sunken",
-    SUNKEN_SEA =                "Calamity Sunken Sea",
+    SUNKEN_SEA =                "Calamity Sunken Sea_gif",
     SULPHUR_SEA =               "Calamity Sulphurous Sea",
-    CRAG =                      "Calamity Brimstone Crag",
+    CRAG =                      "Calamity Brimstone Crag_gif",
     ABYSS_1 =                   "Calamity Abyss 1",
     ABYSS_2 =                   "Calamity Abyss 2",
     ABYSS_3 =                   "Calamity Abyss 3",

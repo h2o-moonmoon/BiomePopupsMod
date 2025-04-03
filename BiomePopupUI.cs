@@ -173,6 +173,7 @@ internal class BiomePopupUI : UIState
         }
 
         _checkScale();
+        _popup.Update(Main.gameTimeCache);
         // return if timer expired
         if (_displayTime <= 0 && !_isInfiniteStay)
         {

@@ -8,12 +8,12 @@ internal class ScanVanilla : BiomeScan
     {
         public const string
         // TOWNS
-        TOWN =                          "Town",
+        TOWN =                          "Town_gif",
         TOWN_FOREST =                   "Town_Forest",
-        TOWN_OCEAN =                    "Town_Ocean",
+        TOWN_OCEAN =                    "Town_Ocean_gif",
         TOWN_MUSHROOM =                 "Town_Mushroom",
         TOWN_JUNGLE =                   "Town_Jungle",
-        TOWN_SNOW =                     "Town_Snow",
+        TOWN_SNOW =                     "Town_Snow_gif",
         TOWN_DESERT =                   "Town_Desert",
         TOWN_HALLOW =                   "Town_Hallow",
         TOWN_CAVERN =                   "Town_Cavern",
@@ -23,21 +23,21 @@ internal class ScanVanilla : BiomeScan
 		STARDUST =                      "Stardust",
 		VORTEX =                        "Vortex",
         // Mini Biome
-        METEOR =                        "Meteor",
-		DUNGEON =                       "Dungeon",
+        METEOR =                        "Meteor_gif",
+		DUNGEON =                       "Dungeon_gif",
 		JUNGLE_TEMPLE =                 "Jungle Temple",
         GRAVEYARD =                     "Graveyard",
 		GRANITE =                       "Granite Cave",
-		MARBLE =                        "Marble Cave",
+		MARBLE =                        "Marble Cave_gif",
 		SPIDER =                        "Spider Cave",
-		BEEHIVE =                       "Beehive",
+		BEEHIVE =                       "Beehive_gif",
 		AETHER =                        "Aether",
 		// Layer
-		SPACE =                         "Space",
+		SPACE =                         "Space_gif",
 		FOREST =                        "Forest",
-		UNDERGROUND =                   "Underground Layer",
+		UNDERGROUND =                   "Underground Layer_gif",
 		CAVERN =                        "Cavern Layer",
-		UNDERWORLD =                    "Underworld",
+		UNDERWORLD =                    "Underworld_gif",
 		// Biome
 		MUSHROOM =                      "Glowing Mushroom",
         MUSHROOM_UNDERGROUND =          "Underground Glowing Mushroom",
@@ -47,7 +47,7 @@ internal class ScanVanilla : BiomeScan
         SNOW_UNDERGROUND =              "Ice",
 		DESERT =                        "Desert",
         DESERT_UNDERGROUND =            "Underground Desert",
-		OCEAN =                         "Ocean",
+		OCEAN =                         "Ocean_gif",
 		// Corruption
 		CORRUPTION =                    "Corrupted Biome",
         CORRUPTION_UNDERGROUND =        "Underground Corrupted Biome",
@@ -55,7 +55,7 @@ internal class ScanVanilla : BiomeScan
         CORRUPTION_SNOW_UNDERGROUND =   "Underground Corrupted Snow",
         CORRUPTION_DESERT =             "Corrupted Desert",
         CORRUPTION_DESERT_UNDERGROUND = "Underground Corrupted Desert",
-        CORRUPTION_OCEAN =              "Corrupted Ocean",
+        CORRUPTION_OCEAN =              "Corrupted Ocean_gif",
         // Crimson
         CRIMSON =                       "Crimson Biome",
 		CRIMSON_UNDERGROUND =           "Underground Crimson Biome",
@@ -63,7 +63,7 @@ internal class ScanVanilla : BiomeScan
 		CRIMSON_SNOW_UNDERGROUND =      "Underground Crimson Snow",
 		CRIMSON_DESERT =                "Crimson Desert",
 		CRIMSON_DESERT_UNDERGROUND =    "Underground Crimson Desert",
-		CRIMSON_OCEAN =                 "Crimson Ocean",
+		CRIMSON_OCEAN =                 "Crimson Ocean_gif",
 		// Hallow
 		HALLOW =                        "Hallowed Biome",
 		HALLOW_UNDERGROUND =            "Underground Hallowed Biome",
@@ -71,7 +71,7 @@ internal class ScanVanilla : BiomeScan
 		HALLOW_SNOW_UNDERGROUND =       "Underground Hallowed Snow",
 		HALLOW_DESERT =                 "Hallowed Desert",
 		HALLOW_DESERT_UNDERGROUND =     "Underground Hallowed Desert",
-		HALLOW_OCEAN =                  "Hallowed Ocean"
+		HALLOW_OCEAN =                  "Hallowed Ocean_gif"
         ;
 
         public override string ScanTowns(Player player)
@@ -83,7 +83,7 @@ internal class ScanVanilla : BiomeScan
             if (player.ZoneJungle) return TOWN_JUNGLE;
             if (player.ZoneSnow) return TOWN_SNOW;
             if (player.ZoneDesert) return TOWN_DESERT;
-            if (player.ZoneHallow) return TOWN_DESERT;
+            if (player.ZoneHallow) return TOWN_HALLOW;
             if (player.ZoneRockLayerHeight) return TOWN_CAVERN;
             return TOWN;
         }

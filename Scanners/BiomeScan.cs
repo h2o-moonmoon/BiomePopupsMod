@@ -31,6 +31,11 @@ internal abstract class BiomeScan
             {
                 string value = (string)field.GetValue(null); // Get the constant value
                 GetTexture(value);  // Call the method to get the texture
+                if (value.EndsWith("_gif"))
+                {
+                    string baseUri = value.Substring(0, value.Length - 4); // Remove "_gif"
+                    GetTexture(baseUri);  // Call the method to get the texture
+                }
             }
 
             // Move to the base type to continue the search
