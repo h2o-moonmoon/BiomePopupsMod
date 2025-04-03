@@ -31,7 +31,7 @@ internal class ScanVanilla : BiomeScan
 		MARBLE =                        "Marble Cave_gif",
 		SPIDER =                        "Spider Cave",
 		BEEHIVE =                       "Beehive_gif",
-		AETHER =                        "Aether",
+		AETHER =                        "Aether_gif",
 		// Layer
 		SPACE =                         "Space_gif",
 		FOREST =                        "Forest",
@@ -66,7 +66,7 @@ internal class ScanVanilla : BiomeScan
 		CRIMSON_OCEAN =                 "Crimson Ocean_gif",
 		// Hallow
 		HALLOW =                        "Hallowed Biome",
-		HALLOW_UNDERGROUND =            "Underground Hallowed Biome",
+		HALLOW_UNDERGROUND =            "Underground Hallowed Biome_gif",
 		HALLOW_SNOW =                   "Hallowed Snow",
 		HALLOW_SNOW_UNDERGROUND =       "Underground Hallowed Snow",
 		HALLOW_DESERT =                 "Hallowed Desert",

@@ -10,7 +10,6 @@ using Microsoft.Xna.Framework;
 TODO:
     Tics to Seconds
     Better Transparency
-    Gif Popups
 	Mod Biomes:
         Verdant
 		Remnants

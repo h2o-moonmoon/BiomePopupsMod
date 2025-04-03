@@ -15,3 +15,13 @@
 > No naming convention needed, feel free to use your own
 
 Example: ['ScanCalamity'](Scanners/Mods/ScanCalamity.cs)
+
+## Gif Popups & Sprite Sheets
+Gifs are not supported so you will need to create a sprite sheet.
+1. The sprite sheet must be vertical (one column)
+2. The sheet name must end with '_gif'
+3. An image with the same name must exist without the ending '_gif' (eg. 'snow' & 'snow_gif')
+	1. This image must be the same dimensions as a frame of the sheet
+	2. The animator will scan the dimensions of this image to calculate the frame cuts from the sheet
+4. In your ModScan class, return the sheet image (with the '__gif')
+5. In your ModScan class, make a public const string for the sheet to pre-load it
