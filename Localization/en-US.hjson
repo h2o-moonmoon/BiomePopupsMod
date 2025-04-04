@@ -1,0 +1,82 @@
+Mods: {
+	BiomePopupsMod: {
+		Configs: {
+			BiomePopupConfig: {
+				DisplayName: Config
+
+				Headers: {
+					Animation: Animations
+					Advanced: Advanced
+					Visuals: Visuals
+				}
+
+				BiomeCheckDelay: {
+					Tooltip: Interval (in ticks) between biome checks
+					Label: Biome Check Interval
+				}
+
+				IsHideWhileBossAlive: {
+					Tooltip: Should popup be hidden while a boss is alive
+					Label: Hide While Boss Is Alive
+				}
+
+				IsHideWhileInventoryOpen: {
+					Tooltip: Should popup be hidden when the player inventory is open
+					Label: Hide While Inventory Open
+				}
+
+				AnimationOutTime: {
+					Tooltip: Duration (in tics) for the popup to animate out (disappear)
+					Label: Animation-Out Duration
+				}
+
+				AnimateInDuration: {
+					Tooltip: Duration (in tics) for the popup to animate in
+					Label: Animation-In Duration
+				}
+
+				VisibleDuration: {
+					Tooltip: Duration (in tics) for the popup to remain stationary between animations (-1 means infinite)
+					Label: Display Duration
+				}
+
+				AnimationType: {
+					Tooltip: Title appear and disappear animation
+					Label: Animation Type
+				}
+
+				CustomScale: {
+					Tooltip: Choose the popup size scale, between 50% and 200%
+					Label: Custom Popup Scale
+				}
+
+				IsScaleWithUI: {
+					Tooltip: If enabled, the popup will scale along with the UI scale
+					Label: Scale with UI
+				}
+
+				Position: {
+					Tooltip: Choose the position of the Popup
+					Label: Position
+				}
+			}
+
+			AnimationType: {
+				FadeSlide.Label: Fade with Slide
+				Slide.Label: Slide
+				FadeSwipe.Label: Fade with swipe
+				Fade.Label: Fade
+				None.Label: No animation
+				Tooltip: ""
+			}
+
+			PositionOption: {
+				BottomRight.Label: Bottom Right
+				BottomLeft.Label: Bottom Left
+				Bottom.Label: Bottom
+				Top.Label: Top
+				Tooltip: ""
+			}
+		}
+	}
+}

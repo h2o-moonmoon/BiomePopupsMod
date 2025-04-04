@@ -3,33 +3,7 @@ using System.Collections.Generic;
 using Terraria;
 using Terraria.UI;
 using Terraria.ModLoader;
-using Microsoft.Xna.Framework;
 
-
-/*
-TODO:
-    Tics to Seconds
-	Mod Biomes:
-		Remnants
-        Verdant
-		The Stars Above
-		Mod of Redemption
-		Spirit Mod
-		Arbour
-		Spooky
-		The Depths
-		Confection Rebaked
-		Starlight River
-		Bob Blender
-		Aequus
-		Friends, Furniture and Fun
-		Calamity Infernum
-		Rothur Mod
-		Everjade
-		Awakened Light
-		Spirit Reforged
-		Lunar Veil
-*/
 namespace BiomePopupsMod;
 
 public class BiomePopupSystem : ModSystem

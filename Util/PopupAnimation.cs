@@ -90,7 +90,6 @@ internal abstract class PopupAnimation
 
 internal class AnimationNone : PopupAnimation
 {
-    public override void Animate(float time, AnimationConfig config, BiomePopup popup) { }
     protected override void AnimateIn(float progress, AnimationConfig config, BiomePopup popup) { }
 
     protected override void AnimateOut(float progress, AnimationConfig config, BiomePopup popup) { }
