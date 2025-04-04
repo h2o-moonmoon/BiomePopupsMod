@@ -9,10 +9,9 @@ using Microsoft.Xna.Framework;
 /*
 TODO:
     Tics to Seconds
-    Better Transparency
 	Mod Biomes:
-        Verdant
 		Remnants
+        Verdant
 		The Stars Above
 		Mod of Redemption
 		Spirit Mod

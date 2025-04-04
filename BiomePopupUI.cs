@@ -69,7 +69,7 @@ internal class BiomePopupUI : UIState
                 case AnimationType.Slide:
                     return new AnimationSlide().Animate;
                 case AnimationType.FadeSlide:
-                    return new AnimationSlide().Animate;
+                    return new AnimationFadeSlide().Animate;
                 case AnimationType.None:
                 default:
                     return new AnimationNone().Animate;

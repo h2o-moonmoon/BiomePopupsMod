@@ -15,7 +15,7 @@ class BiomePopup : UIElement
     public float Alpha
     {
         get => backgroundColor.A;
-        set => backgroundColor.A = Convert.ToByte(value * 255);
+        set => backgroundColor = Color.White * value;
     }
     public Vector2 textureSize;
 

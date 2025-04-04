@@ -157,15 +157,24 @@ internal class AnimationFadeSwipe : PopupAnimation
 
 internal class AnimationSlide : PopupAnimation
 {
+    private float _getDistance(AnimationConfig config, BiomePopup popup)
+    {
+        float distance = 
+            config.PositionOption == PositionOption.BottomRight ||
+            config.PositionOption == PositionOption.BottomLeft ?
+            popup.textureSize.X : 
+            popup.textureSize.Y;
+        return -distance;
+    }
     protected override void AnimateIn(float progress, AnimationConfig config, BiomePopup popup)
     {
-        float margin = MathHelper.SmoothStep(-popup.textureSize.Y, MARGIN, progress);
+        float margin = MathHelper.SmoothStep(_getDistance(config, popup), MARGIN, progress);
         _setMargin(margin, config, popup);
     }
 
     protected override void AnimateOut(float progress, AnimationConfig config, BiomePopup popup)
     {
-        float margin = MathHelper.SmoothStep(MARGIN, -popup.textureSize.Y, progress);
+        float margin = MathHelper.SmoothStep(MARGIN, _getDistance(config, popup), progress);
         _setMargin(margin, config, popup);
     }
 
@@ -196,9 +205,19 @@ internal class AnimationSlide : PopupAnimation
 
 internal class AnimationFadeSlide : PopupAnimation
 {
+    private float _getDistance(AnimationConfig config, BiomePopup popup)
+    {
+        float distance =
+            config.PositionOption == PositionOption.BottomRight ||
+            config.PositionOption == PositionOption.BottomLeft ?
+            popup.textureSize.X :
+            popup.textureSize.Y;
+        return -distance;
+    }
+
     protected override void AnimateIn(float progress, AnimationConfig config, BiomePopup popup)
     {
-        float margin = MathHelper.SmoothStep(-popup.textureSize.Y, 20f, progress);
+        float margin = MathHelper.SmoothStep(_getDistance(config, popup), 20f, progress);
         _setMargin(margin, config, popup);
         float alpha = MathHelper.SmoothStep(0, 1, progress);
         popup.Alpha = alpha;
@@ -206,7 +225,7 @@ internal class AnimationFadeSlide : PopupAnimation
 
     protected override void AnimateOut(float progress, AnimationConfig config, BiomePopup popup)
     {
-        float margin = MathHelper.SmoothStep(20f, -popup.textureSize.Y, progress);
+        float margin = MathHelper.SmoothStep(20f, _getDistance(config, popup), progress);
         _setMargin(margin, config, popup);
         float alpha = MathHelper.SmoothStep(1, 0, progress);
         popup.Alpha = alpha;
