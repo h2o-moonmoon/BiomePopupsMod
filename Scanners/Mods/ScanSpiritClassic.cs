@@ -60,7 +60,7 @@ internal class ScanSpiritClassic : ModScan
 
             if (CheckModBiome(player, mod, "SpiritSurfaceBiome"))
             {
-                //if (player.ZoneBeach) return SPIRIT_OCEAN;
+                if (player.ZoneBeach) return SPIRIT_OCEAN;
                 bool isUnderground = player.ZoneDirtLayerHeight || player.ZoneRockLayerHeight;
                 if (player.ZoneDesert) return isUnderground ?
                         SPIRIT_UNDERGROUND_DESERT :
@@ -74,7 +74,7 @@ internal class ScanSpiritClassic : ModScan
             }
             if (CheckModBiome(player, mod, "SpiritUndergroundBiome"))
             {
-                //if (player.ZoneBeach) return SPIRIT_OCEAN;
+                if (player.ZoneBeach) return SPIRIT_OCEAN;
                 if (player.ZoneDesert) return SPIRIT_UNDERGROUND_DESERT;
                 if (player.ZoneSnow) return SPIRIT_UNDERGROUND_SNOW;
                 return SPIRIT_UNDERGROUND;
