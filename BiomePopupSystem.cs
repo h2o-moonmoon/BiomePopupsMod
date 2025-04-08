@@ -37,7 +37,16 @@ public class BiomePopupSystem : ModSystem
     {
         if (_popupState.IsVisible)
         {
-            layers.Add(new LegacyGameInterfaceLayer(
+            int mouseTextIndex = layers.FindIndex(layer => layer.Name.Equals("Vanilla: Cursor"));
+            if (mouseTextIndex != -1) layers.Insert(mouseTextIndex, _getInterface());
+            else layers.Add(_getInterface());
+        }
+    }
+
+    private LegacyGameInterfaceLayer _getInterface()
+    {
+        return 
+            new LegacyGameInterfaceLayer(
                 "YourModName: BiomePopup",
                 delegate
                 {
@@ -45,8 +54,7 @@ public class BiomePopupSystem : ModSystem
                     _popupState.Draw(Main.spriteBatch);
                     return true;
                 },
-                InterfaceScaleType.UI)
+                InterfaceScaleType.UI
             );
-        }
     }
 }

@@ -114,6 +114,11 @@ namespace BiomePopupsMod
         [DefaultValue(true)]
         public bool IsHideWhileBossAlive;
 
+        [Label("Hide While Chat Is Open")]
+        [Tooltip("Should popup be hidden while chat is open")]
+        [DefaultValue(true)]
+        public bool IsHideWhileChatOpen;
+
         [Label("Biome Check Interval")]
         [Tooltip("Interval (in ticks) between biome checks")]
         [Range(1f, 300f)]

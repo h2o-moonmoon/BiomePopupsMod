@@ -1,5 +1,5 @@
 displayName = Biome Popups
 author = MoonMoon
-version = 1.4.2
+version = 1.4.3
 description = Stay informed with on-screen popups when you enter different biomes!
 side = Client

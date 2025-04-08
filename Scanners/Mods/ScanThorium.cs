@@ -19,7 +19,7 @@ internal class ScanThorium : ModScan
 
     public override string ScanBiomes(Player player)
     {
-        if (TryCheckInBiome("ThoriumMod", "DepthsBiome")) return DEPTHS;
+        if (TryCheckInBiome(_modName, "DepthsBiome")) return DEPTHS;
         return "";
     }
 }

@@ -53,7 +53,7 @@ internal class ScanCalamity : ModScan
     public override string ScanBiomes(Player player)
     {
 
-        if (ModLoader.TryGetMod("CalamityMod", out Mod mod))
+        if (ModLoader.TryGetMod(_modName, out Mod mod))
         {
             if (CheckModBiome(player, mod, "SunkenSeaBiome"))       return SUNKEN_SEA;
             if (CheckModBiome(player, mod, "SulphurousSeaBiome"))   return SULPHUR_SEA;

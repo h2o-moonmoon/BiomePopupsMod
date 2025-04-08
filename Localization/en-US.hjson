@@ -59,6 +59,11 @@ Mods: {
 					Tooltip: Choose the position of the Popup
 					Label: Position
 				}
+
+				IsHideWhileChatOpen: {
+					Label: Hide While Chat Is Open
+					Tooltip: Should popup be hidden while chat is open
+				}
 			}
 
 			AnimationType: {

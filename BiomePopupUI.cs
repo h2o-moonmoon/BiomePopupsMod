@@ -85,6 +85,7 @@ internal class BiomePopupUI : UIState
                 bool bossIsAlive = Main.npc.Any(npc => npc.active && npc.boss);
                 if (_config.IsHideWhileBossAlive && bossIsAlive) return false;
                 if (_config.IsHideWhileInventoryOpen && Main.playerInventory) return false;
+                if (_config.IsHideWhileChatOpen && Main.drawingPlayerChat) return false;
             }
             return (_isInfiniteStay || _displayTime > 0) && _popup != null;
         }

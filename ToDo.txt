@@ -1,15 +1,14 @@
 TODO:
-    Client Bug
     Config:
         Tics to Seconds
         Hide on chatbox
         custom position
+		custom popups
+		Animation for Hide
 	Mod Biomes:
-		Remnants
+		Mod of Redemption
         Verdant
 		The Stars Above
-		Mod of Redemption
-		Spirit Mod
 		Arbour
 		Spooky
 		The Depths
@@ -22,5 +21,4 @@ TODO:
 		Rothur Mod
 		Everjade
 		Awakened Light
-		Spirit Reforged
 		Lunar Veil
