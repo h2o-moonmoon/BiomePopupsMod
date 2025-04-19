@@ -1,12 +1,16 @@
 TODO:
     Config:
+		Blacklist
+		First World Discovery
         Tics to Seconds
-        Hide on chatbox
         custom position
 		custom popups
 		Animation for Hide
 	Mod Biomes:
 		Mod of Redemption
+		Lunar Veil
+		Polarities
+		===================
         Verdant
 		The Stars Above
 		Arbour
@@ -21,4 +25,3 @@ TODO:
 		Rothur Mod
 		Everjade
 		Awakened Light
-		Lunar Veil

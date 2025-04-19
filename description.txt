@@ -5,6 +5,9 @@
 Supported Mods:
 [*] Thorium
 [*] Calamity
+[*] Remnants
+[*] Spirit Classic
+[*] Spirit Reforged
 [*] *More to come*
 
 Detects:

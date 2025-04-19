@@ -8,7 +8,7 @@ namespace BiomePopupsMod;
 
 public class BiomePopupSystem : ModSystem
 {
-    private BiomePopupUI _popupState;
+    internal static BiomePopupUI _popupState;
 
     public override void OnModLoad()
     {

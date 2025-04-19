@@ -16,7 +16,7 @@ internal class BiomePopupUI : UIState
     private bool _isInfiniteStay = false;
     private bool _isAnimating = true;
 
-    private string _currentBiome = "";
+    internal string _currentBiome = "";
 
     private float _currentScale;
     private int _biomeTicks = 0;
